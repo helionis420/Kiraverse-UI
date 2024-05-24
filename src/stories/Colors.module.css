@@ -1,0 +1,172 @@
+.wrap {
+  @apply grid grid-cols-3 gap-4 p-7;
+}
+
+.item {
+  @apply flex justify-center items-center w-full h-[9.375rem] rounded-md p-3;
+}
+
+.title {
+  @apply text-center font-medium;
+}
+
+/* Text */
+
+.text.white {
+  @apply bg-light;
+}
+
+.text.pink-100 {
+  @apply bg-typography-pink-100;
+}
+
+.text.bright-pink-100 {
+  @apply bg-typography-bright-pink-100;
+}
+
+/* Stroke */
+
+.stroke.blue-100 {
+  @apply bg-stroke-blue-100;
+}
+
+.stroke.pink-100 {
+  @apply bg-stroke-pink-100;
+}
+
+.stroke.blue-violet-gradient {
+  background: var(--gradient-blue-violet);
+}
+
+.stroke.gradient-blue-horizontal {
+  background: var(--gradient-blue-horizontal);
+}
+
+.stroke.dark-violet-gradient {
+  background: var(--gradient-dark-violet);
+}
+
+.stroke.dark-violet-gradient .title {
+  @apply text-light;
+}
+
+.stroke.bright-violet-gradient {
+  background: var(--gradient-bright-violet);
+}
+
+.stroke.radial-blue-gradient {
+  background-image: var(--gradient-radial-blue);
+}
+
+.stroke.violet-grey-gradient {
+  background: var(--gradient-violet-grey);
+}
+
+.stroke.violet-grey-gradient .title {
+  @apply text-light;
+}
+
+.stroke.upper-blue-gradient {
+  background: var(--gradient-upper-blue);
+}
+
+.stroke.grey-100 {
+  @apply bg-stroke-grey-100;
+}
+
+.stroke.grey-100 .title {
+  @apply text-light;
+}
+
+.stroke.left-blue-gradient {
+  background: var(--gradient-left-blue);
+}
+
+.stroke.white-50 {
+  position: relative;
+  background: var(--gradient-white-50);
+}
+
+.stroke.white-50 .title {
+  @apply text-light;
+}
+
+.stroke.angular-white-gradient {
+  background: var(--gradient-angular-white);
+}
+
+/* Backgrounds */
+
+.background.dark-violet-100 {
+  @apply bg-background-dark-violet-100 text-light;
+}
+
+.background.blue-100 {
+  background: var(--gradient-blue-100);
+}
+
+.background.half-blur-30 {
+  @apply bg-background-half-blur-30 text-light;
+}
+
+.background.photo-blur {
+  background: var(--gradient-photo-blur) #ffffff;
+
+  @apply text-light;
+}
+
+.background.main-black-100 {
+  @apply bg-dark text-light;
+}
+
+.background.blue-10 {
+  @apply bg-background-blue-10 text-light;
+}
+
+.background.vertical-blue-gradient {
+  background: var(--gradient-vertical-blue);
+}
+
+.background.overlay-black-15 {
+  @apply bg-background-overlay-black-15 text-light;
+}
+
+.background.overlay-black-40 {
+  @apply bg-background-overlay-black-40 text-light;
+}
+
+.background.black-90 {
+  @apply bg-background-black-90 text-light;
+}
+
+.background.left-black-overlay {
+  background: var(--gradient-left-black-overlay);
+
+  @apply text-light;
+}
+
+.background.angular-overlay {
+  background: var(--gradient-angular-overlay);
+
+  @apply text-light;
+}
+
+.background.grey-10 {
+  @apply bg-background-grey-10 text-light;
+}
+
+.background.down-blue-gradient {
+  background: var(--gradient-down-blue);
+}
+
+.background.grey-100 {
+  @apply bg-background-grey-100 text-light;
+}
+
+.background.white-10 {
+  background: var(--gradient-white-10);
+}
+
+.background.glow {
+  background: var(--gradient-glow);
+}

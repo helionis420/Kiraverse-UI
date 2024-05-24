@@ -1,0 +1,73 @@
+.wrap {
+  --min-developers-item-height: 9.125rem;
+
+  @apply relative flex items-start pt-[1.625rem] pb-[1.125rem] pl-[1.6875rem] pr-[1.4375rem] min-h-[var(--min-developers-item-height)];
+}
+
+.wrap .mob-decor {
+  @apply hidden;
+}
+
+.icon-wrap {
+  @apply w-9 h-9 shrink-0 my-auto mr-6 text-typography-pink-100;
+}
+
+.icon-wrap .icon {
+  @apply w-full h-full;
+}
+
+.content {
+  @apply flex-auto min-w-0;
+}
+
+.holder {
+  @apply flex;
+}
+
+.wrap .title {
+  @apply tracking-[1px];
+}
+
+.desc {
+  @apply mt-2;
+}
+
+.text {
+  @apply text-typography-pink-100;
+}
+
+@screen md {
+  .wrap {
+    @apply pt-[1.4688rem] px-[1.0938rem] pb-[1.2813rem];
+  }
+
+  .holder {
+    @apply flex-col;
+  }
+
+  .icon-wrap {
+    @apply my-0 mr-0;
+  }
+
+  .content {
+    @apply mt-4;
+  }
+}
+
+@screen xs {
+  .wrap {
+    --min-developers-item-height: 17.25rem;
+  }
+
+  .wrap .desktop-decor {
+    @apply hidden;
+  }
+
+  .wrap .mob-decor {
+    @apply flex;
+  }
+
+  .icon-wrap {
+    @apply w-8 h-8;
+  }
+}

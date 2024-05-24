@@ -1,0 +1,11 @@
+.wrap {
+  @apply w-[4.9375rem] h-[calc(100%+1px)] flex will-change-color transition-colors duration-300;
+}
+
+.wrap svg {
+  @apply w-full h-full;
+}
+
+.right svg {
+  @apply -scale-x-100;
+}

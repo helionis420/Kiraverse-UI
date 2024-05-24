@@ -1,0 +1,47 @@
+.wrap {
+  @apply pt-[4.375rem] pb-[4.5625rem];
+}
+
+.holder {
+  @apply max-w-[80.125rem] w-full mx-auto;
+}
+
+.wrap .head {
+  @apply my-auto w-full text-center tracking-[1px];
+}
+
+.wrap .title {
+  @apply tracking-[1px];
+}
+
+.wrap .banner {
+  --min-banner-height: 28.625rem;
+}
+
+.action {
+  @apply mt-12;
+}
+
+@screen md {
+  .wrap {
+    @apply pt-[1.625rem] pb-[6.8125rem];
+  }
+}
+
+@screen xs {
+  .holder {
+    @apply max-w-none w-auto -mx-[0.1875rem];
+  }
+
+  .wrap .banner {
+    --min-banner-height: 35.5rem;
+  }
+
+  .action {
+    @apply mt-[2.8125rem];
+  }
+
+  .wrap .btn {
+    @apply min-w-0 w-full max-w-[15.1875rem];
+  }
+}

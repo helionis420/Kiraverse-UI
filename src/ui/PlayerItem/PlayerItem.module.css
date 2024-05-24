@@ -1,0 +1,96 @@
+.wrap {
+  --player-item-bg: var(--gradient-white-10);
+
+  background: var(--player-item-bg);
+  backdrop-filter: blur(2px);
+
+  @apply relative border border-stroke-white-50 rounded-[0.625rem] w-[23.125rem] h-[3.125rem] px-5 py-2 flex justify-between items-center;
+}
+
+.wrap.first {
+  --player-item-first-border: hsla(259deg, 100%, 76%, 1);
+  --player-item-bg: var(--gradient-stroke-light-violet);
+
+  @apply border-[var(--player-item-first-border)];
+}
+
+.wrap .left {
+  @apply flex items-center mr-5 w-full truncate;
+}
+
+.left .avatar {
+  @apply mr-[0.625rem] flex-shrink-0;
+}
+
+.left .name {
+  @apply font-space-mono-regular truncate;
+}
+
+.right .place-wrap {
+  background: var(--gradient-violet-grey);
+
+  @apply relative w-[2.625rem] h-[1.875rem] flex justify-center items-center rounded truncate px-1;
+}
+
+.place-wrap::after {
+  background: var(--gradient-stroke-violet-grey) border-box;
+  mask: linear-gradient(hsla(180deg, 0%, 100%, 1) 0 0) content-box,
+    linear-gradient(hsla(180deg, 0%, 100%, 1) 0 0);
+  mask-composite: xor;
+  mask-composite: exclude;
+
+  @apply content-[''] absolute inset-0 rounded border border-transparent pointer-events-none;
+}
+
+.wrap.first .place-wrap {
+  box-shadow: 0 0 20px 0 hsla(273.578deg, 98%, 44%, 0.5);
+}
+
+.place-wrap .place {
+  @apply text-[0.625rem] font-bold truncate;
+}
+
+.tooltip-content {
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+
+  @apply px-2 ml-2 rounded bg-light;
+}
+
+.tooltip-place,
+.tooltip-name {
+  @apply text-dark font-bold;
+}
+
+.tooltip-content[data-state='delayed-open'][data-side='right'] {
+  animation-name: slide-left-and-fade;
+}
+
+.tooltip-content[data-state='delayed-open'][data-side='top'] {
+  animation-name: slide-down-and-fade;
+}
+
+@keyframes slide-left-and-fade {
+  from {
+    opacity: 0;
+    transform: translateX(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-down-and-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

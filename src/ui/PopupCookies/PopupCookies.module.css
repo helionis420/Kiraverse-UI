@@ -1,0 +1,75 @@
+.wrap {
+  @apply max-w-[55.75rem] w-full rounded-2xl border border-stroke-pink-100 will-change-opacity p-4 flex items-center justify-between bg-dark -z-[1] invisible opacity-0;
+
+  transition: opacity 0.3s, visibility 0s 0.3s, z-index 0s 0.3s;
+}
+
+.wrap.show {
+  @apply opacity-100 z-[1] visible;
+
+  transition: opacity 0.3s 0s, visibility 0s 0s, z-index 0s 0s;
+}
+
+.holder {
+  @apply flex-auto min-w-0 flex items-center justify-between;
+}
+
+.icon {
+  @apply inline-flex items-center justify-center flex-shrink-0 p-2 rounded-[0.625rem] bg-background-dark-violet-100 text-stroke-blue-100;
+}
+
+.icon svg {
+  @apply flex-shrink-0;
+}
+
+.content {
+  @apply flex-auto min-w-0 ml-4;
+}
+
+.wrap .desc {
+  @apply text-typography-pink-100;
+}
+
+.link {
+  @apply text-inherit;
+}
+
+.actions {
+  @apply ml-4 flex items-center flex-shrink-0;
+}
+
+.actions > *:nth-child(n + 2) {
+  @apply ml-2.5;
+}
+
+@screen md {
+  .wrap {
+    @apply flex-col items-start;
+  }
+
+  .holder {
+    @apply items-start;
+  }
+
+  .wrap .desc {
+    @apply text-[0.875rem] !leading-[150%];
+  }
+
+  .actions {
+    @apply ml-auto mt-4;
+  }
+}
+
+@screen xs {
+  .actions {
+    @apply grid grid-cols-2 gap-2.5 w-full;
+  }
+
+  .wrap .actions .btn {
+    @apply min-w-0;
+  }
+
+  .actions > *:nth-child(n + 2) {
+    @apply ml-0;
+  }
+}

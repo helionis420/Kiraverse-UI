@@ -1,0 +1,113 @@
+.wrap {
+  @apply scroll-mt-[var(--main-header-height)] relative bg-cover bg-no-repeat bg-[url('/images/about-us.webp')];
+}
+
+.caption {
+  @apply absolute top-0 left-0 right-0 z-[1];
+}
+
+.top,
+.bottom {
+  @apply relative before:absolute before:inset-0 before:pointer-events-none before:bg-background-overlay-black-40 after:absolute after:inset-0 after:pointer-events-none after:bg-cover after:bg-no-repeat after:bg-[url('/images/stars-5.webp')];
+}
+
+.top {
+  @apply pt-[7.125rem] pb-8;
+}
+
+.bottom {
+  @apply pt-8 pb-[7.875rem] after:bg-[url('/images/stars-4.webp')];
+}
+
+.banner-wrap {
+  @apply max-w-[66.75rem] w-full mx-auto relative;
+}
+
+.banner .banner-decor {
+  @apply text-stroke-pink-100;
+}
+
+.banner:hover .banner-decor {
+  @apply text-stroke-blue-100;
+}
+
+.banner-title {
+  @apply pt-[6.6875rem] pb-[6.9375rem] px-[4.5rem] w-full;
+}
+
+.banner-holder {
+  @apply px-28;
+}
+
+.banner-content {
+  @apply max-w-[45.8125rem] w-full mx-auto text-center -mt-[4.375rem];
+}
+
+.banner-content .banner-desc {
+  @apply text-typography-pink-100;
+
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.banner-action {
+  @apply mt-12 flex items-center justify-center;
+}
+
+@screen md {
+  .wrap {
+    @apply bg-none;
+  }
+
+  .top,
+  .bottom {
+    @apply before:hidden after:hidden;
+  }
+
+  .top {
+    @apply pt-[7.375rem];
+  }
+
+  .bottom {
+    @apply pb-[5.8125rem];
+  }
+
+  .banner-wrap {
+    @apply max-w-none;
+  }
+
+  .banner-title {
+    @apply pt-[0.9375rem] px-[1.3125rem] pb-[0.6875rem];
+  }
+
+  .wrap .banner {
+    --min-banner-height: 0;
+  }
+
+  .banner-holder {
+    @apply px-0 mt-[1.875rem];
+  }
+
+  .banner-content {
+    @apply mt-0 max-w-none;
+  }
+
+  .banner-content .banner-desc {
+    @apply tracking-[0.01px];
+
+    text-shadow: none;
+  }
+
+  .banner-action {
+    @apply mt-8;
+  }
+}
+
+@screen xs {
+  .banner {
+    @apply -mx-[0.1875rem];
+  }
+
+  .banner .banner-title-holder {
+    @apply pt-3.5;
+  }
+}

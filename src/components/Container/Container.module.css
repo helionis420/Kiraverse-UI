@@ -1,0 +1,22 @@
+.wrap {
+  @apply w-full mx-auto max-w-[1440px] px-20;
+}
+
+.wrap.sm {
+  @apply max-w-[881px] px-10;
+}
+
+.paddings-sm-x {
+  @apply px-10;
+}
+
+@screen lg {
+  .wrap,
+  .paddings-sm-x {
+    @apply px-5;
+  }
+
+  .wrap.sm {
+    @apply max-w-[841px] px-5;
+  }
+}

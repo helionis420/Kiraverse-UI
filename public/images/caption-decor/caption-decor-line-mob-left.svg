@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 50 44" fill="none">
+    <g clipPath="url(#caption-decor-icon-left-mob-0)">
+        <path stroke="url(#caption-decor-icon-left-mob-1)" stroke-width="1.498" d="M0 2h51.75l26 41.193h220l23-41.568L375 2" />
+    </g>
+    <defs>
+        <linearGradient id="caption-decor-icon-left-mob-1" x1="-46.5" x2="425.5" y1="2" y2="2.001" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00E5FF" stop-opacity="0" />
+            <stop offset=".503" stop-color="#00E5FF" />
+            <stop offset="1" stop-color="#00E5FF" stop-opacity="0" />
+        </linearGradient>
+    </defs>
+</svg>

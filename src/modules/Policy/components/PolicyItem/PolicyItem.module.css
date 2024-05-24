@@ -1,0 +1,56 @@
+.wrap.text {
+  @apply text-typography-pink-100 text-[1.125rem];
+}
+
+.wrap.title {
+  @apply tracking-[1px];
+}
+
+.wrap.subtitle {
+  @apply text-base;
+}
+
+.wrap.title + .wrap.title,
+.wrap.subtitle + .wrap.subtitle {
+  @apply mt-4;
+}
+
+.wrap.link {
+  @apply text-inherit;
+}
+
+.text:nth-child(n + 2) {
+  @apply mt-3;
+}
+
+.text + ul {
+  @apply mt-3;
+}
+
+.title + .subtitle,
+.text + .subtitle {
+  @apply mt-6;
+}
+
+.title + .text,
+.title + ul {
+  @apply mt-6;
+}
+
+.child {
+  @apply block;
+}
+
+@screen md {
+  .wrap.title {
+    @apply text-2xl leading-[116.667%] !font-kusanagi;
+  }
+
+  .wrap.text {
+    @apply text-base leading-[138%];
+  }
+
+  .wrap.subtitle {
+    @apply text-sm;
+  }
+}

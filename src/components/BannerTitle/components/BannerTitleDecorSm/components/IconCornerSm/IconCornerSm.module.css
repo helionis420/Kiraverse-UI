@@ -1,0 +1,19 @@
+.wrap {
+  @apply w-[2.75rem] h-[3.8125rem] flex flex-shrink-0 will-change-color transition-colors duration-300;
+}
+
+.wrap svg {
+  @apply w-full h-full;
+}
+
+.left-bottom svg {
+  @apply -scale-y-100;
+}
+
+.right-top svg {
+  @apply -scale-x-100;
+}
+
+.right-bottom svg {
+  @apply rotate-180;
+}

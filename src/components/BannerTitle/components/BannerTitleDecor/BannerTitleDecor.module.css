@@ -1,0 +1,15 @@
+.wrap {
+  @apply absolute inset-0 flex flex-col pointer-events-none w-full h-full;
+}
+
+.top {
+  @apply flex justify-between items-start w-full h-[4.9375rem];
+}
+
+.middle {
+  @apply flex-auto min-h-0 flex -my-[0.5px] justify-between overflow-hidden;
+}
+
+.bottom {
+  @apply flex justify-between items-end w-full h-[4.9375rem];
+}

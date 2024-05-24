@@ -1,0 +1,29 @@
+.wrap {
+  @apply w-full h-full flex items-center;
+}
+
+.holder {
+  @apply min-w-[17rem] h-full relative -my-[0.01px];
+}
+
+.holder svg {
+  @apply w-full h-full;
+}
+
+.content {
+  @apply absolute inset-0 py-2 px-[12%] flex items-center justify-center;
+}
+
+.wrap .mob {
+  @apply hidden;
+}
+
+@screen xs {
+  .wrap .desktop {
+    @apply hidden;
+  }
+
+  .wrap .mob {
+    @apply flex;
+  }
+}

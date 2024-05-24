@@ -1,0 +1,21 @@
+.wrap {
+  --min-banner-height: 24.875rem;
+
+  @apply min-h-[var(--min-banner-height)] flex;
+}
+
+.icons {
+  @apply text-stroke-pink-100;
+}
+
+.inner-hover {
+  @apply opacity-0;
+}
+
+.wrap:hover .icons {
+  @apply text-stroke-blue-100;
+}
+
+.wrap:hover .inner-hover {
+  @apply opacity-100;
+}

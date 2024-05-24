@@ -1,0 +1,7 @@
+.wrap {
+  @apply flex-auto min-w-0 flex w-full h-[0.625rem] will-change-color transition-colors duration-300;
+}
+
+.wrap svg {
+  @apply w-full h-full;
+}

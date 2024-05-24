@@ -1,0 +1,47 @@
+.wrap {
+  @apply bg-background-half-blur-30 flex fixed top-0 left-0 right-0 w-full z-20 h-[6.25rem] backdrop-blur-[20px];
+}
+
+.container {
+  @apply flex items-center justify-between;
+}
+
+.logo-link {
+  @apply my-6 flex-shrink-0 relative z-[1];
+}
+
+.side {
+  @apply relative z-[1];
+}
+
+.holder {
+  @apply flex-auto min-w-0;
+}
+
+@screen xl {
+  .wrap {
+    @apply bg-transparent backdrop-blur-none before:absolute before:inset-0 before:bg-black-36 before:pointer-events-none before:z-[1];
+  }
+}
+
+@screen md {
+  .wrap {
+    @apply h-[5rem];
+  }
+
+  .wrap .container {
+    @apply px-6;
+  }
+}
+
+@screen xs {
+  .logo-link {
+    @apply mr-4;
+  }
+}
+
+@screen xxs {
+  .logo-link {
+    @apply mr-2.5;
+  }
+}

@@ -1,0 +1,35 @@
+.wrap {
+  @apply px-4 py-[0.625rem] flex justify-center items-center text-typography-bright-pink-100 outline-none;
+}
+
+.wrap .icon {
+  @apply text-light mr-2;
+}
+
+.wrap,
+.wrap .icon,
+.wrap .title {
+  @apply transition-colors;
+}
+
+.wrap[data-state='active'] {
+  @apply bg-stroke-blue-100 bg-opacity-[7%];
+}
+
+.wrap:hover .icon,
+.wrap:hover .title,
+.wrap[data-state='active'] .icon,
+.wrap[data-state='active'] .title {
+  @apply text-stroke-blue-100;
+}
+
+.wrap:focus-visible {
+  @apply focus-primary-child;
+}
+
+@media (hover: none) {
+  .wrap:focus,
+  .wrap:focus:not(:focus-visible) {
+    @apply focus-primary-child;
+  }
+}

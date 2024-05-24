@@ -1,0 +1,42 @@
+.wrap {
+  @apply relative before:pt-[8.684%] before:block;
+}
+
+.decor {
+  @apply absolute -left-[1.972%] -top-[22.6%] -right-[1.972%] -bottom-[22.6%];
+}
+
+.decor svg,
+.decor img {
+  @apply w-full;
+}
+
+.decor .icon {
+  @apply relative z-[1];
+}
+
+.decor-shadow {
+  @apply absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.mob {
+  @apply hidden;
+}
+
+@screen xs {
+  .wrap {
+    @apply before:pt-[14.02%];
+  }
+
+  .decor {
+    @apply -left-[4.48%] -top-[29.79%] -right-[4.48%] -bottom-[29.79%];
+  }
+
+  .desktop {
+    @apply hidden;
+  }
+
+  .mob {
+    @apply block;
+  }
+}

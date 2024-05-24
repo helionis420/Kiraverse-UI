@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 90" fill="none">
+    <g filter="url(#season-item-head-0)">
+        <path fill="url(#season-item-head-1)" d="M24 77h691c5.523 0 10-4.477 10-10V30.754a9.999 9.999 0 0 0-3.087-7.226l-6.013-5.753A10 10 0 0 0 708.987 15h-70.233a10 10 0 0 0-7.204 3.065l-4.6 4.778a10 10 0 0 1-7.204 3.064H519l-42.02.52a10 10 0 0 1-7.503-3.251l-4.513-4.935a10 10 0 0 0-7.356-3.251l-427.475-.98a10 10 0 0 0-7.067 2.901l-6.11 6.063A10 10 0 0 0 14 30.072V67c0 5.523 4.477 10 10 10Z" />
+        <path stroke="url(#season-item-head-2)" d="M715 76.5H24a9.5 9.5 0 0 1-9.5-9.5V30.072a9.5 9.5 0 0 1 2.809-6.743l6.11-6.063a9.5 9.5 0 0 1 6.713-2.756l427.475.98a9.498 9.498 0 0 1 6.988 3.089l4.513 4.934a10.498 10.498 0 0 0 7.878 3.413L519 26.407h100.746c2.854 0 5.585-1.161 7.564-3.218l4.6-4.777a9.5 9.5 0 0 1 6.844-2.912h70.233c2.447 0 4.799.944 6.567 2.636l6.014 5.753a9.5 9.5 0 0 1 2.932 6.864V67a9.5 9.5 0 0 1-9.5 9.5Z" />
+    </g>
+    <g filter="url(#season-item-head-3)">
+        <path stroke="url(#season-item-head-4)" d="M725 76V31.642c0-2.652-1.054-5.196-2.929-7.07l-6.642-6.643A10 10 0 0 0 708.358 15h-68.241a10 10 0 0 0-7.041 2.9l-5.152 5.108a10 10 0 0 1-7.041 2.9H476.399a10 10 0 0 1-7.371-3.243l-4.056-4.423A10 10 0 0 0 457.601 15H29.878a10 10 0 0 0-6.742 2.615l-5.379 4.91a10 10 0 0 0-3.257 7.386V75.5" shape-rendering="crispEdges" />
+    </g>
+    <circle cx="52" cy="46" r="6.5" fill="#3C3636" stroke="url(#season-item-head-5)" />
+    <circle cx="74" cy="46" r="6.5" fill="#3C3636" stroke="url(#season-item-head-6)" />
+    <circle cx="96" cy="46" r="6.5" fill="#3C3636" stroke="url(#season-item-head-7)" />
+    <defs>
+        <linearGradient id="season-item-head-1" x1="139.86" x2="651.761" y1="14" y2="223.549" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" stop-opacity=".05" />
+            <stop offset="1" stop-color="#fff" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="season-item-head-2" x1="3924.5" x2="3787.92" y1="-142.414" y2="634.143" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" />
+            <stop offset="1" stop-color="#fff" stop-opacity=".1" />
+        </linearGradient>
+        <linearGradient id="season-item-head-4" x1="369.75" x2="369.75" y1="21.033" y2="76" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00E5FF" />
+            <stop offset="1" stop-color="#00E5FF" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="season-item-head-5" x1="52" x2="52" y1="41.187" y2="52" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00E5FF" />
+            <stop offset="1" stop-color="#00E5FF" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="season-item-head-6" x1="74" x2="74" y1="41.187" y2="52" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00E5FF" />
+            <stop offset="1" stop-color="#00E5FF" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="season-item-head-7" x1="96" x2="96" y1="41.187" y2="52" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00E5FF" />
+            <stop offset="1" stop-color="#00E5FF" stop-opacity="0" />
+        </linearGradient>
+        <filter id="season-item-head-0" width="719" height="70.99" x="10" y="10.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_4971_159334" />
+            <feBlend in="SourceGraphic" in2="effect1_backgroundBlur_4971_159334" result="shape" />
+        </filter>
+        <filter id="season-item-head-3" width="739.5" height="89.5" x="0" y=".5" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="effect1_dropShadow_4971_159334" />
+            <feOffset />
+            <feGaussianBlur stdDeviation="5" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.14 0" />
+            <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_4971_159334" />
+            <feBlend in="SourceGraphic" in2="effect1_dropShadow_4971_159334" result="shape" />
+        </filter>
+    </defs>
+</svg>

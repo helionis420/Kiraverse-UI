@@ -1,0 +1,40 @@
+name: 'build'
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: lint
+        run: npm run lint
+
+      - name: build the project
+        run: npm run build && npx next export
+
+      - name: build storybook
+        run: npm run build-sb
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: kiraverse
+          path: |
+            out/
+            storybook-static/

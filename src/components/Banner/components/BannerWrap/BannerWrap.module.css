@@ -1,0 +1,17 @@
+.wrap {
+  @apply w-full flex flex-col;
+}
+
+.items {
+  @apply flex items-center justify-between;
+}
+
+.holder {
+  @apply -my-[6.9375rem] flex flex-auto min-h-0;
+}
+
+@screen md {
+  .responsive .holder {
+    @apply -my-[4.625rem];
+  }
+}

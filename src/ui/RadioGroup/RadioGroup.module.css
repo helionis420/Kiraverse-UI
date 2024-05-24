@@ -1,0 +1,60 @@
+.wrap {
+  @apply grid grid-flow-row auto-rows-max gap-6;
+}
+
+.radio-wrap {
+  @apply relative grid grid-cols-[1rem_1fr] gap-3 items-center w-fit;
+}
+
+.radio-wrap .checkmark {
+  @apply absolute w-[0.875rem] h-[0.875rem] top-0 left-0;
+}
+
+.radio {
+  @apply relative w-4 h-4 flex-shrink-0 border-stroke-blue-100 border rounded-full transition-colors;
+}
+
+.radio::after {
+  @apply content-[''] absolute -inset-px border-inherit border rounded-full blur-[0.1563rem];
+}
+
+.radio:disabled {
+  @apply opacity-50;
+}
+
+.radio[data-state='checked'] {
+  @apply bg-stroke-blue-100;
+}
+
+.radio[data-state='checked'] .checkmark::before,
+.radio[data-state='checked'] .checkmark::after {
+  @apply absolute content-[''] h-px  bg-light rounded-full;
+}
+
+.radio[data-state='checked'] .checkmark::before {
+  @apply w-1 top-[0.5rem] left-[0.175rem] rotate-45;
+}
+
+.radio[data-state='checked'] .checkmark::after {
+  @apply w-[0.4375rem] top-[0.45rem] left-[0.275rem] -rotate-45;
+}
+
+.radio:focus-visible::after {
+  @apply outline-none ring-offset-2;
+}
+
+.radio:focus::after {
+  @apply outline-none ring-offset-2;
+}
+
+.radio:focus:not(.radio:focus-visible)::after {
+  @apply ring-0 ring-offset-0;
+}
+
+.radio ~ .label {
+  @apply text-typography-pink-100 cursor-pointer;
+}
+
+.radio:disabled ~ .label {
+  @apply opacity-50;
+}

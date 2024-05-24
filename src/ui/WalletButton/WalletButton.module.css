@@ -1,0 +1,43 @@
+.wrap {
+  @apply p-4 rounded-2xl border-[0.125rem] border-stroke-grey-100 transition-colors outline-none;
+}
+
+.wrap .title {
+  @apply text-light transition-colors;
+}
+
+.wrap:hover .title {
+  @apply text-stroke-blue-100;
+}
+
+.wrap[data-state='checked'] {
+  @apply border-stroke-blue-100;
+}
+
+.wrap[data-state='checked'] .title {
+  @apply text-stroke-blue-100;
+}
+
+.wrap:focus .title {
+  @apply text-stroke-blue-100;
+}
+
+.wrap:focus-visible .title {
+  @apply text-stroke-blue-100;
+}
+
+.wrap:focus:not(:focus-visible) .title {
+  @apply text-stroke-blue-100;
+}
+
+.wrap.without-logo {
+  @apply w-full text-start;
+}
+
+.wrap.with-logo {
+  @apply w-[10rem] flex flex-col items-center;
+}
+
+.wrap.with-logo .logo {
+  @apply mb-3;
+}

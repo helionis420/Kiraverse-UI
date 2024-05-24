@@ -1,0 +1,13 @@
+.link {
+  @apply leading-[135%] font-space-mono-regular;
+}
+
+@screen xl {
+  .link.responsive {
+    @apply text-[2rem] leading-[95%] tracking-[0.32px];
+  }
+
+  .link.responsive.active {
+    @apply font-bold font-space-mono-bold;
+  }
+}

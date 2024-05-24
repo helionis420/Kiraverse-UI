@@ -1,0 +1,41 @@
+.wrap {
+  @apply flex min-w-0;
+}
+
+.holder {
+  @apply flex items-center min-w-0;
+}
+
+.holder > *:nth-child(n + 2) {
+  @apply ml-4;
+}
+
+.wrap .avatar {
+  --avatar-size: 3rem;
+}
+
+/* @screen xl {
+  .wrap .mob {
+    @apply hidden;
+  }
+} */
+
+@screen md {
+  .wrap .avatar {
+    --avatar-size: 2.625rem;
+  }
+}
+
+@screen xs {
+  .wrap {
+    @apply flex-auto;
+  }
+
+  .holder {
+    @apply flex-auto;
+  }
+
+  .wrap .holder .btn {
+    @apply mx-auto min-w-0 max-w-[8.375rem] w-full px-2.5;
+  }
+}

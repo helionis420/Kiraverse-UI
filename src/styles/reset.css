@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  @apply box-border;
+}
+
+* {
+  @apply m-0;
+}
+
+html,
+[id='__next'] {
+  @apply h-full;
+}
+
+body {
+  @apply min-h-full leading-[150%] antialiased;
+}
+
+a {
+  @apply no-underline text-inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  @apply block max-w-full;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply break-words;
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+  @apply text-inherit bg-transparent border-0 p-0 cursor-pointer;
+}
+
+button[disabled],
+input[type='button'][disabled],
+input[type='submit'][disabled],
+input[type='reset'][disabled] {
+  @apply cursor-not-allowed;
+}
+
+input[type='checkbox'],
+input[type='radio'],
+input[type='file'] {
+  @apply sr-only;
+}
+
+ul,
+ol,
+dd {
+  @apply list-none p-0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,21 @@
+.wrap {
+  @apply flex items-center;
+}
+
+.item {
+  @apply w-6 h-6 shrink-0;
+}
+
+.item:nth-child(n + 2) {
+  @apply ml-[min(1.75vw,1.5rem)];
+}
+
+@screen lg {
+  .wrap {
+    @apply mt-8;
+  }
+
+  .item:nth-child(n + 2) {
+    @apply ml-6;
+  }
+}

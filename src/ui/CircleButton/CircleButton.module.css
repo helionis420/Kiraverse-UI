@@ -1,0 +1,118 @@
+.wrap {
+  @apply relative block w-[20rem] h-[20rem] text-light;
+}
+
+.wrap .outer,
+.wrap .inner {
+  @apply absolute inset-0 text-inherit top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 z-[-1];
+}
+
+.wrap:hover {
+  @apply text-stroke-blue-100;
+}
+
+.wrap:hover .inner {
+  @apply opacity-70;
+}
+
+.wrap:focus-visible {
+  @apply outline-none text-typography-pink-100;
+}
+
+.wrap:focus {
+  @apply outline-none text-typography-pink-100;
+}
+
+.wrap:focus:not(.wrap:focus-visible) {
+  @apply outline-none text-typography-pink-100;
+}
+
+.wrap:focus-visible .inner {
+  @apply opacity-70;
+}
+
+.wrap:focus .inner {
+  @apply opacity-70;
+}
+
+.wrap:focus:not(.wrap:focus-visible) .inner {
+  @apply opacity-70;
+}
+
+.content {
+  @apply inline-flex text-inherit h-full w-full justify-center items-center pb-1.5 pl-3;
+}
+
+.content .title {
+  @apply mr-[0.625rem] text-inherit transition-colors;
+}
+
+.content .icon {
+  @apply transition-colors;
+}
+
+.caption {
+  @apply text-inherit transition-colors absolute font-bold text-[0.4375rem];
+}
+
+.caption.top {
+  @apply top-[-0.75rem] left-1/2 -translate-x-1/2;
+}
+
+.caption.bottom {
+  @apply bottom-[-0.85rem] left-1/2 -translate-x-1/2;
+}
+
+.caption.left,
+.caption.right {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.caption.left {
+  @apply left-[-0.9rem] top-1/2 -translate-y-1/2;
+}
+
+.caption.right {
+  @apply right-[-1rem] top-[calc(50%-2px)] -translate-y-1/2;
+
+  letter-spacing: -0.1875rem;
+}
+
+@screen md {
+  .wrap {
+    @apply w-[8.5rem] h-[8.5rem];
+  }
+
+  .wrap .inner {
+    @apply w-[7.3125rem] h-[7.3125rem];
+  }
+
+  .content {
+    @apply flex-col text-center p-0;
+  }
+
+  .content .title {
+    @apply uppercase text-[0.8125rem] block w-full tracking-[-0.5px] leading-[135%] px-3 ml-2 mb-[0.1875rem];
+  }
+
+  .content .icon {
+    @apply w-5 h-5;
+  }
+
+  .caption.top {
+    @apply top-[-1rem];
+  }
+
+  .caption.bottom {
+    @apply bottom-[-1rem];
+  }
+
+  .caption.left {
+    @apply left-[-1.15rem];
+  }
+
+  .caption.right {
+    @apply right-[-1.1rem];
+  }
+}

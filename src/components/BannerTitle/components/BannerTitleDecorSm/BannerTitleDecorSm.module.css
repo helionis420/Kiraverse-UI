@@ -1,0 +1,23 @@
+.wrap {
+  @apply absolute inset-0 flex flex-col pointer-events-none w-full h-full;
+}
+
+.top {
+  @apply flex justify-between items-start w-full h-[3.8125rem];
+}
+
+.line-top {
+  @apply flex-auto flex min-w-0 -ml-[min(1.25rem,7%)] -mr-[min(0.25rem,1.5%)];
+}
+
+.middle {
+  @apply flex-auto min-h-0 flex justify-between w-full -mt-[min(1.4375rem,16.43%)] -mb-[min(1.875rem,21.43%)] h-[min(calc(100%+3.3125rem),calc(137.86%))];
+}
+
+.line-bottom {
+  @apply flex-auto flex min-w-0 -ml-[min(2rem,10.64%)] -mr-[min(0.6875rem,3.7%)];
+}
+
+.bottom {
+  @apply flex justify-between items-end w-full h-[3.8125rem];
+}

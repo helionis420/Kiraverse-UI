@@ -1,0 +1,72 @@
+.link {
+  @apply inline-flex text-inherit transition-colors;
+}
+
+.link.link-underline {
+  @apply underline inline;
+}
+
+/* Variants */
+.link.primary:not(.disabled) {
+  @apply text-typography-pink-100 hover:text-stroke-pink-100 active:text-typography-bright-pink-100;
+}
+
+.link.primary:not(.disabled).active {
+  @apply text-white-100;
+}
+
+.link.secondary:not(.disabled) {
+  @apply text-typography-pink-100 hover:text-stroke-blue-100 active:text-stroke-blue-100;
+}
+
+.link.secondary:not(.disabled).active {
+  @apply text-stroke-blue-100;
+}
+
+.link.secondary:focus-visible {
+  @apply text-typography-bright-pink-100;
+}
+
+.link.secondary:focus {
+  @apply text-typography-bright-pink-100;
+}
+
+.link.secondary:focus:not(.link.secondary:focus-visible) {
+  @apply text-typography-bright-pink-100;
+}
+
+.link.tertiary:not(.disabled) {
+  @apply text-stroke-blue-100 hover:text-stroke-pink-100 active:text-typography-bright-pink-100;
+}
+
+.link.tertiary:not(.disabled).active {
+  @apply text-typography-bright-pink-100;
+}
+
+.link.tertiary:focus-visible {
+  @apply text-typography-bright-pink-100;
+}
+
+.link.tertiary:focus {
+  @apply text-typography-bright-pink-100;
+}
+
+.link.tertiary:focus:not(.link.tertiary:focus-visible) {
+  @apply text-typography-bright-pink-100;
+}
+
+.link.default {
+  @apply text-[1.0625rem] leading-[135%] font-space-mono-regular;
+}
+
+.link.primary.disabled {
+  @apply text-typography-neutral-grey cursor-not-allowed;
+}
+
+.link.secondary.disabled {
+  @apply text-typography-neutral-grey cursor-not-allowed;
+}
+
+.link.tertiary.disabled {
+  @apply text-typography-neutral-grey cursor-not-allowed;
+}

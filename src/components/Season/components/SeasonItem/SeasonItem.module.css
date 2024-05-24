@@ -1,0 +1,67 @@
+.holder {
+  @apply flex;
+}
+
+.figure {
+  @apply max-w-[44.625rem] w-full;
+}
+
+.figure-body {
+  @apply flex mt-2 p-[0.6875rem] pt-2.5 relative rounded-[0.625rem] overflow-hidden border border-stroke-white-50 before:absolute before:inset-0 before:blur-[2px];
+}
+
+.figure-body::before {
+  background: var(--gradient-white-10);
+}
+
+.figure-holder {
+  @apply inline-flex max-h-[24.375rem] relative z-[1] rounded-[0.625rem] overflow-hidden;
+}
+
+.figure-holder img {
+  @apply object-cover;
+}
+
+.side {
+  @apply ml-9 flex items-center max-w-[20.125rem] w-full;
+}
+
+.content {
+  @apply w-full;
+}
+
+.action {
+  @apply mt-8;
+}
+
+.desc {
+  @apply w-full mt-[1.125rem];
+}
+
+.wrap .text {
+  @apply text-typography-pink-100;
+}
+
+.wrap .title {
+  @apply tracking-[1px];
+}
+
+@screen md {
+  .holder {
+    @apply grid grid-cols-1 gap-[2.3125rem] justify-items-center;
+  }
+
+  .side {
+    @apply ml-0 text-center max-w-none;
+  }
+
+  .desc {
+    @apply mt-4;
+  }
+}
+
+@screen xs {
+  .figure-body {
+    @apply mt-1.5;
+  }
+}

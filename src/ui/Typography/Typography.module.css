@@ -1,0 +1,109 @@
+.wrap {
+  @apply text-light selection:text-dark selection:bg-typography-pink-100;
+}
+
+/* FONT FAMILY */
+.headline-h1,
+.headline-h2,
+.headline-h3,
+.headline-uppercase,
+.body-small {
+  @apply font-kusanagi;
+}
+
+.headline-primary-uppercase,
+.headline-primary,
+.headline-secondary-bold,
+.body-large-bold {
+  @apply font-space-mono-bold;
+}
+
+.headline-secondary,
+.body-large,
+.body-large-uppercase,
+.body-small-mono {
+  @apply font-space-mono-regular;
+}
+
+/* HEADLINES */
+.headline-h1 {
+  @apply text-6xl leading-[110%];
+}
+
+.headline-h2 {
+  @apply text-5xl leading-[120%];
+}
+
+.headline-h3 {
+  @apply text-4xl leading-[135%];
+}
+
+.headline-primary-uppercase,
+.headline-primary {
+  @apply text-2xl leading-7;
+}
+
+.headline-primary-uppercase {
+  @apply uppercase;
+}
+
+.headline-secondary,
+.headline-secondary-bold {
+  @apply text-lg leading-[135%];
+}
+
+.headline-uppercase {
+  @apply text-sm uppercase leading-[1.375rem];
+}
+
+/* BODY */
+.body-large,
+.body-large-bold,
+.body-large-uppercase {
+  @apply text-base;
+}
+
+.body-large,
+.body-large-uppercase {
+  @apply leading-[135%];
+}
+
+.body-large-bold {
+  @apply leading-6;
+}
+
+.body-large-uppercase {
+  @apply uppercase;
+}
+
+.body-small {
+  @apply text-sm leading-[1.375rem];
+}
+
+.body-small-mono {
+  @apply text-md leading-6;
+}
+
+@screen xl {
+  .headline-h1 {
+    @apply text-5xl;
+  }
+}
+
+@screen md {
+  .headline-h1 {
+    @apply text-4xl;
+  }
+
+  .headline-h2 {
+    @apply text-[1.75rem] leading-[125%];
+  }
+
+  .headline-h3 {
+    @apply text-2xl leading-7;
+  }
+
+  .headline-primary-uppercase {
+    @apply text-xl leading-[1.375rem];
+  }
+}

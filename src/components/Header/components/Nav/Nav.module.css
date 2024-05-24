@@ -1,0 +1,82 @@
+.nav {
+  @apply flex items-center flex-auto min-w-0;
+}
+
+.holder {
+  @apply flex items-center justify-center w-full px-4;
+}
+
+.item:nth-child(n + 2) {
+  @apply ml-[min(2.2vw,2rem)];
+}
+
+.menu {
+  @apply flex items-center justify-center mx-auto;
+}
+
+.mob {
+  @apply hidden;
+}
+
+@screen xl {
+  .nav {
+    @apply pt-[100px] fixed h-screen top-0 bottom-0 left-0 w-full opacity-0 bg-dark bg-cover bg-no-repeat -z-[1] invisible before:absolute before:inset-0 before:pointer-events-none bg-[url('/images/hero.webp')];
+
+    transition: opacity 0.5s ease, visibility 0s 0.5s, z-index 0s 0.5s;
+  }
+
+  .nav.hidden {
+    @apply transition-none;
+  }
+
+  .nav.active {
+    @apply z-[0] visible opacity-100;
+
+    transition: opacity 0.5s ease, visibility 0s 0s, z-index 0s 0s;
+  }
+
+  .nav::before {
+    background: linear-gradient(180deg, rgba(3, 2, 2, 0) 0%, #100314 100%);
+  }
+
+  .holder {
+    @apply block max-h-full overflow-y-auto overscroll-y-none relative z-[1] pb-[70px] border-transparent border-t-[10px] border-b-[30px] px-10;
+  }
+
+  .menu {
+    @apply flex-col;
+  }
+
+  .item:nth-child(n + 2) {
+    @apply ml-0 mt-8;
+  }
+
+  .mob {
+    @apply block;
+  }
+}
+
+@screen md {
+  .nav {
+    @apply pt-[80px];
+  }
+
+  .holder {
+    @apply border-b-[10px];
+  }
+
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
+
+    .nav {
+      bottom: var(--safe-area-inset-bottom);
+      height: calc(100vh - var(--safe-area-inset-bottom));
+    }
+  }
+}
+
+@screen xs {
+  .nav {
+    @apply bg-[url('/images/hero-mob.webp')];
+  }
+}

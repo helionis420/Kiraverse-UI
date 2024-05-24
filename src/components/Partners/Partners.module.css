@@ -1,0 +1,53 @@
+.wrap {
+  @apply scroll-mt-[var(--main-header-height)] relative bg-cover bg-no-repeat bg-[url('/images/partners.webp')];
+}
+
+.caption {
+  @apply absolute top-0 left-0 right-0 z-[1];
+}
+
+.container {
+  @apply relative z-[1];
+}
+
+.holder {
+  @apply pt-[7.0625rem] pb-[5.25rem] max-w-[57.25rem] w-full mx-auto;
+}
+
+.wrap .title {
+  @apply tracking-[1px];
+}
+
+.head {
+  @apply max-w-[48rem] w-full mx-auto text-center;
+}
+
+.desc {
+  @apply mt-4;
+}
+
+.text {
+  @apply text-typography-pink-100;
+}
+
+.items {
+  @apply mt-14 flex flex-wrap -mx-3 -mb-5 items-center justify-center;
+}
+
+.items .item {
+  @apply mx-3 mb-5;
+}
+
+.subtitle {
+  @apply mt-14 text-center;
+}
+
+@screen md {
+  .wrap {
+    @apply bg-none;
+  }
+
+  .holder {
+    @apply pt-[7.25rem] pb-[6.25rem];
+  }
+}

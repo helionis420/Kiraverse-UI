@@ -1,0 +1,158 @@
+.button {
+  @apply relative inline-flex items-center justify-center transition-colors px-6 py-3 max-w-full;
+}
+
+.wrap {
+  min-width: 0;
+}
+
+.inner-hover,
+.inner-active,
+.inner-focus,
+.inner-disabled {
+  @apply opacity-0;
+}
+
+.content {
+  @apply relative will-change-color transition-colors truncate w-full tracking-[1px];
+}
+
+.button:not([disabled], .disabled):hover .inner-hover {
+  @apply opacity-100;
+}
+
+.button:not([disabled], .disabled):active .inner-active {
+  @apply opacity-100;
+}
+
+.button:focus-visible .inner-focus {
+  @apply opacity-100;
+}
+
+.button:focus .inner-focus {
+  @apply opacity-100;
+}
+
+.button:focus:not(.button:focus-visible) .inner-focus {
+  @apply opacity-100;
+}
+
+.button:focus-visible {
+  @apply outline-none;
+}
+
+.button:focus {
+  @apply outline-none;
+}
+
+.button:focus:not(.button:focus-visible) {
+  @apply outline-none;
+}
+
+.button.disabled {
+  @apply cursor-not-allowed;
+}
+
+.button[disabled] .inner-disabled,
+.button.disabled .inner-disabled {
+  @apply opacity-100;
+}
+
+/* Sizes */
+.button.sm:not(.tertiary) {
+  @apply text-[0.8125rem] leading-[116%] min-w-[8.875rem] h-[2.625rem];
+}
+
+/* Variants */
+.button:not(.tertiary) {
+  @apply text-base font-space-mono-bold font-bold leading-[150%] tracking-[1px] uppercase min-w-[15.1875rem] h-[4.125rem];
+}
+
+.button.primary {
+  @apply transition-[filter] text-white-100;
+
+  filter: url('#btn-primary-filter');
+}
+
+.button.primary:not([disabled], .disabled):hover {
+  filter: url('#btn-primary-filter-hover');
+}
+
+.button.primary:not([disabled], .disabled):active {
+  filter: url('#btn-primary-filter-active');
+}
+
+.button.primary:focus-visible {
+  filter: url('#btn-primary-filter-focus');
+}
+
+.button.primary:focus {
+  filter: url('#btn-primary-filter-focus');
+}
+
+.button.primary:focus:not(.button.primary:focus-visible) {
+  filter: url('#btn-primary-filter-focus');
+}
+
+.button.primary[disabled],
+.button.primary.disabled {
+  @apply text-blue-50;
+}
+
+.button.secondary {
+  @apply text-typography-bright-pink-100;
+}
+
+.button.secondary[disabled] .inner:not([class*='inner-']),
+.button.secondary.disabled .inner:not([class*='inner-']) {
+  @apply opacity-0;
+}
+
+.button.secondary[disabled] .inner-disabled,
+.button.secondary.disabled .inner-disabled {
+  @apply transition-none;
+}
+
+.button.tertiary {
+  @apply border border-stroke-grey-100 border-solid rounded-[2rem] bg-dark py-[0.77rem] px-6 text-[0.9375rem] leading-[147%] text-typography-pink-100 font-space-mono-regular hover:bg-background-dark-violet-100 hover:text-typography-bright-pink-100 active:bg-background-light-violet-100;
+}
+
+.button.tertiary:not(:hover, :active):focus-visible {
+  @apply text-typography-pink-100 bg-dark border-typography-pink-100;
+}
+
+.button.tertiary:not(:hover, :active):focus {
+  @apply text-typography-pink-100 bg-dark border-typography-pink-100;
+}
+
+.button.tertiary:not(:hover, :active):focus:not(.button.primary:focus-visible) {
+  @apply text-typography-pink-100 bg-dark border-typography-pink-100;
+}
+
+.button.tertiary[disabled] {
+  @apply bg-background-neutral-violet border-stroke-grey-100;
+}
+
+/* Icon */
+.icon {
+  @apply shrink-0;
+}
+
+.icon-left {
+  @apply mr-2;
+}
+
+.icon-right {
+  @apply order-1 ml-2;
+}
+
+.icon-wrap {
+  @apply relative -my-2;
+}
+
+@screen md {
+  /* Sizes */
+  .button.responsive:not(.tertiary) {
+    @apply text-[0.8125rem] leading-[116%] min-w-[8.875rem] h-[2.625rem];
+  }
+}

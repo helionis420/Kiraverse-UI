@@ -1,0 +1,11 @@
+.wrap {
+  @apply w-20 h-[4.9375rem] flex flex-shrink-0 will-change-color transition-colors duration-300;
+}
+
+.wrap svg {
+  @apply w-full h-full;
+}
+
+.right-bottom svg {
+  @apply -scale-y-100;
+}

@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Kusanagi';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url('/fonts/Kusanagi.woff') format('woff'), url('/fonts/Kusanagi.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SpaceMono-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: url('/fonts/SpaceMono-Regular.woff') format('woff'),
+    url('/fonts/SpaceMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SpaceMono-Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+  src: url('/fonts/SpaceMono-Bold.woff') format('woff'),
+    url('/fonts/SpaceMono-Bold.woff2') format('woff2');
+}

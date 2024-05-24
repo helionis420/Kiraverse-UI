@@ -1,0 +1,96 @@
+.wrap {
+  --ntf-card-width: 18.5625rem;
+
+  @apply relative max-w-[var(--ntf-card-width)] outline-none;
+}
+
+.holder {
+  @apply flex h-[27.375rem] pt-[1.375rem] pb-[1.9375rem] px-[0.9375rem];
+}
+
+.inner {
+  @apply flex-auto min-w-0 flex flex-col;
+}
+
+.image {
+  @apply flex flex-auto min-h-0 relative rounded-[0.875rem] max-h-[19.3125rem] transition-[max-height] duration-[400ms] overflow-hidden;
+}
+
+.image img {
+  @apply object-cover;
+}
+
+.items {
+  @apply mt-3 px-2;
+}
+
+.item {
+  @apply block truncate w-full;
+}
+
+.items > *:nth-child(n + 2) {
+  @apply mt-1;
+}
+
+.items .nick {
+  @apply text-typography-pink-100;
+}
+
+.action-holder {
+  @apply mt-auto pt-3.5;
+}
+
+.action-wrap {
+  @apply -mt-3.5 -mb-5 -mx-[0.9375rem] h-0 transition-[height] duration-[400ms] overflow-hidden;
+}
+
+.action-inner {
+  @apply pt-3.5 pb-5 px-[0.9375rem] opacity-0 transition-opacity duration-300;
+}
+
+.decor-hover,
+.decor-focus {
+  @apply opacity-0;
+}
+
+.wrap:hover .decor-hover {
+  @apply opacity-100;
+}
+
+.wrap:hover .image {
+  @apply max-h-[14.25rem];
+}
+
+.wrap:hover .action-wrap {
+  @apply h-[6.25rem];
+}
+
+.wrap:hover .action-inner {
+  @apply opacity-100;
+}
+
+.wrap:focus-visible .decor-focus {
+  @apply opacity-100;
+}
+
+.wrap:focus .decor-focus {
+  @apply opacity-100;
+}
+
+.wrap:focus:not(.wrap:focus-visible) .decor-focus {
+  @apply opacity-100;
+}
+
+@screen xs {
+  .holder {
+    @apply pb-5;
+  }
+
+  .items {
+    @apply mt-3.5;
+  }
+
+  .items > *:nth-child(n + 2) {
+    @apply mt-[0.4375rem];
+  }
+}

@@ -1,0 +1,75 @@
+.wrap {
+  @apply max-w-[65.6875rem] w-full mx-auto;
+}
+
+.holder {
+  @apply p-[1.0625rem] border border-stroke-blue-100 relative z-[1] rounded-[1.125rem] overflow-hidden;
+}
+
+.inner {
+  @apply bg-dark rounded-2xl overflow-hidden before:block before:pt-[56.25%] before:pointer-events-none relative;
+}
+
+.inner iframe,
+.inner video,
+.inner .frame {
+  @apply absolute inset-0 min-w-full min-h-full w-full h-full border-none outline-none object-cover;
+}
+
+.wrap .link {
+  @apply absolute z-[1] bottom-6 right-6;
+}
+
+.decor {
+  @apply -mt-[7.625rem] max-w-[39.125rem] w-full mx-auto;
+}
+
+.decor svg {
+  @apply w-full;
+}
+
+.decor-mob {
+  @apply hidden;
+}
+
+.mob {
+  @apply hidden;
+}
+
+@screen lg {
+  .wrap .link {
+    @apply bottom-1/2 right-1/2 translate-y-1/2 translate-x-1/2 opacity-0;
+  }
+}
+
+@screen md {
+  .holder {
+    @apply p-0 rounded-[1.125rem] rounded-bl-xl rounded-tr-xl -ml-1 -mr-0.5;
+  }
+
+  .inner {
+    @apply rounded-none;
+  }
+
+  .decor {
+    @apply -mt-px max-w-none -mx-5 w-auto;
+  }
+
+  .decor-desktop {
+    @apply hidden;
+  }
+
+  .decor-mob {
+    @apply block;
+  }
+}
+
+@screen sm {
+  .desktop {
+    @apply hidden;
+  }
+
+  .mob {
+    @apply block;
+  }
+}

@@ -1,0 +1,33 @@
+.button {
+  @apply relative inline-flex items-center justify-center transition-colors w-14 h-14 p-2 rounded-full border border-transparent border-solid;
+}
+
+/* Variants */
+.button.primary {
+  @apply border-typography-bright-pink-100 text-typography-pink-100 backdrop-blur-sm hover:bg-grey-10 hover:text-stroke-pink-100 active:border-typography-bright-pink-100 active:bg-transparent;
+}
+
+.button.primary:focus-visible {
+  @apply outline-none text-stroke-pink-100 border-stroke-pink-100;
+}
+
+.button.primary:focus {
+  @apply outline-none text-stroke-pink-100 border-stroke-pink-100;
+}
+
+.button.primary:focus:not(.button.primary:focus-visible) {
+  @apply outline-none text-stroke-pink-100 border-stroke-pink-100;
+}
+
+.button.primary:disabled {
+  @apply bg-grey-10 text-stroke-violet-100 border-transparent;
+}
+
+/* Icon */
+.icon {
+  @apply shrink-0;
+}
+
+.reverse .icon {
+  @apply rotate-180;
+}

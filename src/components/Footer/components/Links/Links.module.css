@@ -1,0 +1,25 @@
+.wrap {
+  @apply flex items-center pl-2.5;
+}
+
+.item:nth-child(n + 2) {
+  @apply ml-[2.125rem];
+}
+
+.wrap .link {
+  @apply text-sm tracking-[0.5px];
+}
+
+@screen md {
+  .wrap {
+    @apply pl-0;
+  }
+
+  .item:nth-child(n + 2) {
+    @apply ml-3;
+  }
+
+  .wrap .link {
+    @apply text-base tracking-[0px];
+  }
+}

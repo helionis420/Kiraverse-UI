@@ -1,0 +1,109 @@
+.wrap {
+  @apply scroll-mt-[var(--main-header-height)] relative pt-[11.875rem] pb-[7.8125rem] bg-cover bg-no-repeat bg-[url('/images/season.webp')] before:absolute before:inset-0 before:pointer-events-none before:bg-cover before:bg-no-repeat before:bg-[url('/images/stars-5.webp')];
+}
+
+.caption {
+  @apply absolute top-0 left-0 right-0 z-[1];
+}
+
+.container {
+  @apply relative;
+}
+
+.head {
+  @apply max-w-[35.9375rem] w-full mx-auto text-center relative z-[1];
+}
+
+.desc {
+  @apply mt-6;
+}
+
+.wrap .title {
+  @apply tracking-[1px];
+}
+
+.wrap .text {
+  @apply text-typography-pink-100;
+}
+
+.holder {
+  @apply mt-16 flex items-center justify-between relative z-0;
+}
+
+.slider-wrap {
+  @apply flex-auto min-w-0 pt-[15rem] -mt-[15rem] overflow-hidden;
+}
+
+.slider {
+  @apply overflow-visible;
+}
+
+.wrap .slide {
+  @apply h-auto;
+}
+
+.wrap .slide:global(:not(.swiper-slide-active)) .item-content {
+  @apply absolute h-px w-px -m-px p-0 border-0 overflow-hidden;
+
+  clip: rect(0 0 0 0);
+}
+
+.slider-btn {
+  @apply shrink-0 -mt-8;
+}
+
+.wrap :global(.swiper-pagination) {
+  @apply mt-16 bottom-0 static hidden items-center justify-center;
+}
+
+.wrap :global(.swiper-pagination .swiper-pagination-bullet) {
+  @apply shrink-0 first-line:block w-[1.375rem] h-1 bg-stroke-grey-tertiary transition-colors m-0 rounded-none opacity-100 duration-300;
+}
+
+.wrap :global(.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active) {
+  @apply bg-stroke-violet-secondary;
+}
+
+.wrap :global(.swiper-pagination .swiper-pagination-bullet:nth-child(n + 2)) {
+  @apply ml-2;
+}
+
+.item {
+  @apply px-[min(3rem,4%)];
+}
+
+@screen lg {
+  .slider-wrap {
+    @apply -mx-5;
+  }
+
+  .slider {
+    @apply px-5;
+  }
+
+  .item {
+    @apply px-0;
+  }
+
+  .wrap .slider-btn {
+    @apply hidden;
+  }
+
+  .wrap :global(.swiper-pagination) {
+    @apply flex;
+  }
+}
+
+@screen md {
+  .wrap {
+    @apply pt-[7.0625rem] pb-[6.125rem] bg-none before:hidden;
+  }
+
+  .slider {
+    @apply pt-[14.375rem] -mt-[14.375rem];
+  }
+
+  .title {
+    @apply whitespace-pre-line;
+  }
+}

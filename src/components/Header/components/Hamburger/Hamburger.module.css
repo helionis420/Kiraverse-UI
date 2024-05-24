@@ -1,0 +1,72 @@
+.wrap {
+  @apply hidden py-[0.185rem] w-6 h-6 p-0 items-center justify-center cursor-pointer bg-transparent border-none relative z-[1];
+
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+}
+
+.inner,
+.inner::before,
+.inner::after {
+  @apply w-[20px] h-[2px] bg-stroke-grey-secondary absolute block rounded-3xl;
+
+  transition-property: transform, background-color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.inner::before,
+.inner::after {
+  content: '';
+}
+
+.box {
+  @apply w-[20px] h-[14px] inline-flex relative transition-transform will-change-transform;
+}
+
+.inner {
+  @apply block relative top-[1px] mt-[-1px] duration-[275ms];
+
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.inner::before {
+  @apply top-[6.5px] right-0;
+
+  transition: opacity 0.125s 0.275s ease;
+}
+
+.inner::after {
+  @apply top-[13px] right-0;
+
+  transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrap.active .box {
+  @apply scale-[80%];
+}
+
+.wrap.active .inner {
+  @apply bg-white-100;
+
+  transition-delay: 75ms, 0ms;
+  transform: translate3d(0, 6.5px, 0) rotate(135deg) scale(1.2);
+}
+
+.wrap.active .inner::before {
+  @apply delay-[0ms] opacity-0 bg-white-100;
+}
+
+.wrap.active .inner::after {
+  @apply bg-white-100;
+
+  transition-delay: 75ms, 0ms;
+  transform: translate3d(0, -13px, 0) rotate(-270deg);
+}
+
+@screen xl {
+  .wrap {
+    @apply flex;
+  }
+}

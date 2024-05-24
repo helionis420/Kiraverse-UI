@@ -1,0 +1,45 @@
+.wrap {
+  @apply scroll-mt-[var(--main-header-height)] bg-dark;
+}
+
+.caption {
+  @apply absolute top-0 left-0 right-0 z-[1];
+}
+
+.container {
+  @apply relative;
+}
+
+.holder {
+  @apply pt-[8.6875rem] pb-20 max-w-[42.25rem] w-full mx-auto;
+}
+
+.wrap .title {
+  @apply tracking-[1px];
+}
+
+.head {
+  @apply text-center;
+}
+
+.desc {
+  @apply mt-4;
+}
+
+.text {
+  @apply text-typography-pink-100;
+}
+
+.items {
+  @apply mt-16;
+}
+
+.action {
+  @apply mt-16 flex items-center justify-center;
+}
+
+@screen md {
+  .holder {
+    @apply pt-[7.0625rem] pb-[5.625rem];
+  }
+}

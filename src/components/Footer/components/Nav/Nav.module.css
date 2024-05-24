@@ -1,0 +1,37 @@
+.nav {
+  @apply flex items-center justify-center px-4 flex-auto min-w-0;
+}
+
+.item:nth-child(n + 2) {
+  @apply ml-[min(2.2vw,2rem)];
+}
+
+.menu {
+  @apply flex items-center justify-center mx-auto;
+}
+
+@screen xl {
+  .menu {
+    @apply grid grid-cols-3 gap-4 items-start;
+  }
+
+  .item:nth-child(n + 2) {
+    @apply ml-0;
+  }
+}
+
+@screen lg {
+  .nav {
+    @apply px-0;
+  }
+
+  .menu {
+    @apply mt-[1.375rem] w-full gap-x-0 gap-y-3.5;
+  }
+}
+
+@screen md {
+  .menu {
+    @apply grid-cols-2;
+  }
+}

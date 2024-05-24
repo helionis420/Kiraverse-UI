@@ -1,0 +1,7 @@
+.wrap {
+  @apply max-w-[57.6875rem];
+}
+
+.wrap.sm {
+  @apply max-w-[18.75rem];
+}

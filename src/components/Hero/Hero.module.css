@@ -1,0 +1,40 @@
+.wrap {
+  @apply min-h-screen flex relative before:absolute before:inset-0 before:pointer-events-none before:bg-gradient-to-b before:from-background-photo-blur-top before:to-background-photo-blur-bottom before:z-[1] after:absolute after:inset-0
+    after:pointer-events-none after:bg-cover after:bg-no-repeat after:bg-[url('/images/stars-6.webp')] after:z-[1] overflow-hidden;
+}
+
+.container {
+  @apply flex z-[2];
+}
+
+.holder {
+  @apply flex min-w-0 w-full pt-[var(--main-header-height,6.25rem)];
+}
+
+.video {
+  @apply absolute overflow-hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover w-auto h-auto;
+}
+
+.mob {
+  @apply hidden;
+}
+
+@screen md {
+  .holder {
+    @apply pt-[var(--main-header-height,5rem)];
+  }
+}
+
+@screen xs {
+  .wrap .container {
+    @apply px-6;
+  }
+
+  .desktop {
+    @apply hidden;
+  }
+
+  .mob {
+    @apply block;
+  }
+}

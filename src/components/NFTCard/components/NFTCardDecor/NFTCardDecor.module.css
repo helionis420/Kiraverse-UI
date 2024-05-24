@@ -1,0 +1,12 @@
+.wrap {
+  @apply absolute inset-0 flex pointer-events-none w-full h-full will-change-opacity transition-opacity duration-300;
+}
+
+.wrap.corners {
+  @apply -left-[3.7%] -right-[3.7%] -top-[9%] -bottom-[9%] w-[107.4%] h-[118%];
+}
+
+.wrap svg,
+.wrap .image {
+  @apply w-full h-full;
+}

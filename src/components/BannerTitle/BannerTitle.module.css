@@ -1,0 +1,59 @@
+.wrap {
+  --min-banner-title-height: 11.25rem;
+
+  @apply min-h-[var(--min-banner-title-height)] flex relative;
+}
+
+.icons {
+  @apply text-stroke-pink-100;
+}
+
+.holder {
+  @apply w-full flex items-center justify-center text-center p-8;
+}
+
+.wrap:hover .icons {
+  @apply text-stroke-blue-100;
+}
+
+.wrap.md .decor-sm {
+  @apply hidden;
+}
+
+.wrap.md .title {
+  @apply -mt-1.5;
+}
+
+.wrap.sm .decor-md {
+  @apply hidden;
+}
+
+.wrap.sm {
+  --min-banner-title-height: 8.75rem;
+}
+
+.wrap.sm .title {
+  @apply text-[1.75rem] leading-[125%];
+}
+
+@screen md {
+  .wrap {
+    --min-banner-title-height: 8.75rem;
+  }
+
+  .wrap.md .title {
+    @apply mt-0;
+  }
+
+  .wrap.md .decor-md {
+    @apply hidden;
+  }
+
+  .wrap.md .decor-sm {
+    @apply flex;
+  }
+
+  .holder {
+    @apply p-6;
+  }
+}

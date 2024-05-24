@@ -1,0 +1,4 @@
+export const NFT_CARD_DECOR_WIDTH = 266;
+export const NFT_CARD_DECOR_HEIGHT = 309;
+export const NFT_CARD_DECOR_CORNERS_WIDTH = 319;
+export const NFT_CARD_DECOR_CORNERS_HEIGHT = 517;

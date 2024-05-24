@@ -1,0 +1,28 @@
+.wrap {
+  --card-width: 13.1875rem;
+  --card-height: 4.0625rem;
+
+  @apply relative w-[var(--card-width)] h-[var(--card-height)] flex items-center justify-center;
+}
+
+.wrap .decor {
+  @apply absolute inset-0;
+}
+
+.decor.hover {
+  @apply opacity-0 transition-opacity;
+}
+
+.wrap .logo,
+.wrap .filter {
+  @apply z-10;
+}
+
+.wrap .filter {
+  @apply absolute w-full top-0 left-0 opacity-0 transition-opacity mix-blend-multiply;
+}
+
+.wrap:hover .decor.hover,
+.wrap:hover .filter {
+  @apply opacity-100;
+}

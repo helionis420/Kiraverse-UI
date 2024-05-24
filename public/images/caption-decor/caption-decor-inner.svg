@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 272 44" fill="none">
+    <g clipPath="url(#caption-desktop-decor-0)">
+        <path fill="#0085FF" fill-opacity=".07" d="M2 2h268l-22.5 41h-220L2 2Z" />
+        <path stroke="url(#caption-desktop-decor-1)" stroke-width="1.498" d="M-404.125 2H1.25l26 41.193h220l23-41.568h404.5" />
+    </g>
+    <defs>
+        <linearGradient id="caption-desktop-decor-1" x1="-403.002" x2="675.5" y1="1.252" y2="1.251" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00E5FF" stop-opacity="0" />
+            <stop offset=".503" stop-color="#00E5FF" />
+            <stop offset="1" stop-color="#00E5FF" stop-opacity="0" />
+        </linearGradient>
+    </defs>
+</svg>

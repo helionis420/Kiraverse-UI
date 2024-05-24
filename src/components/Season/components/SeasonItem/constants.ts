@@ -1,0 +1,2 @@
+export const SEASON_ITEM_IMAGE_WIDTH = 692;
+export const SEASON_ITEM_IMAGE_HEIGHT = 390;

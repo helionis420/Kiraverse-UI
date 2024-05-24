@@ -1,0 +1,25 @@
+.wrap {
+  --avatar-size: 1.875rem;
+
+  @apply rounded-full inline-flex justify-center items-center bg-dark w-[var(--avatar-size)] h-[var(--avatar-size)] overflow-hidden align-middle border border-solid border-stroke-grey-100;
+}
+
+.image {
+  @apply w-full h-full object-cover;
+}
+
+.fallback {
+  @apply uppercase w-full h-full flex justify-center items-center text-light;
+}
+
+.fallback .text {
+  @apply font-bold text-[calc(var(--avatar-size)/2.75)];
+}
+
+.fallback .icon {
+  @apply text-stroke-blue-100 max-w-[50%];
+}
+
+.wrap .shimmer {
+  @apply absolute inset-0 z-20;
+}

@@ -1,0 +1,123 @@
+.wrap {
+  @apply scroll-mt-[var(--main-header-height)] relative before:absolute before:inset-0 before:pointer-events-none before:bg-cover before:bg-no-repeat before:bg-[url('/images/stars-6-lg.webp')];
+}
+
+.caption {
+  @apply absolute top-0 left-0 right-0 z-[1];
+}
+
+.container {
+  @apply relative z-[1];
+}
+
+.holder {
+  @apply pt-[8.25rem] pb-[12rem];
+}
+
+.wrap .title {
+  @apply text-center tracking-[1px];
+}
+
+.panel {
+  @apply mt-12 -mx-20 flex items-center justify-center;
+}
+
+.panel-nav {
+  @apply flex items-center py-2 -my-2 px-20 overflow-x-auto;
+}
+
+.panel-nav > * {
+  @apply shrink-0;
+}
+
+.panel-nav > *:nth-child(n + 2) {
+  @apply ml-4;
+}
+
+.cards-wrap {
+  @apply mt-[5.25rem] -mx-[0.1875rem];
+}
+
+.cards {
+  @apply grid gap-x-[2.125rem] gap-y-[3.3125rem] justify-center;
+
+  grid-template-columns: repeat(auto-fill, minmax(0, 18.5rem));
+}
+
+.action {
+  @apply mt-[5.25rem] flex items-center justify-center;
+}
+
+.banner-wrap {
+  @apply max-w-[53.875rem] w-full mx-auto;
+}
+
+.banner-wrap .banner {
+  --min-banner-height: 28.125rem;
+}
+
+.banner-title {
+  @apply tracking-[1px];
+}
+
+.text {
+  @apply text-typography-pink-100;
+}
+
+@screen lg {
+  .panel {
+    @apply -mx-5;
+  }
+
+  .panel-nav {
+    @apply px-5;
+  }
+}
+
+@screen md {
+  .title {
+    @apply whitespace-pre-line;
+  }
+
+  .panel {
+    @apply mt-[2.8125rem];
+  }
+
+  .cards-wrap {
+    @apply mt-[3.875rem];
+  }
+
+  .cards {
+    @apply gap-8;
+  }
+
+  .holder {
+    @apply pt-[6.5625rem] pb-28;
+  }
+
+  .action {
+    @apply mt-[3.375rem];
+  }
+}
+
+@screen xs {
+  .cards {
+    @apply grid-cols-1;
+  }
+
+  .banner-wrap .banner {
+    --min-banner-height: 35.5rem;
+  }
+
+  .banner-wrap .banner-title {
+    @apply text-2xl leading-7;
+  }
+
+  .card {
+    @apply mx-auto;
+  }
+
+  .wrap .btn {
+    @apply min-w-0 w-full max-w-[15.1875rem];
+  }
+}

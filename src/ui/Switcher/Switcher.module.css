@@ -1,0 +1,28 @@
+.wrap {
+  --wrap-padding: 0.1875rem;
+  --thumb-size: 1.5rem;
+
+  @apply relative inline-block p-[var(--wrap-padding)] rounded-full bg-dark transition-colors w-[3.8125rem] h-[1.875rem] cursor-pointer outline-none transition-colors;
+}
+
+.wrap[data-state='checked'] {
+  background: var(--gradient-blue-100);
+}
+
+.wrap:disabled {
+  @apply bg-opacity-10 cursor-not-allowed;
+}
+
+.wrap[data-state='checked']:disabled {
+  @apply opacity-50;
+}
+
+.thumb {
+  --translate-x: calc(((var(--thumb-size) / 1.5) * -1 + 1px));
+
+  @apply relative inline-flex justify-start items-center  w-[var(--thumb-size)] h-[var(--thumb-size)] bg-light rounded-full transition-transform translate-x-[var(--translate-x)];
+}
+
+.thumb[data-state='checked'] {
+  --translate-x: calc(var(--thumb-size) / 1.5 - 1px);
+}

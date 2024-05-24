@@ -1,0 +1,77 @@
+.wrap {
+  --padding-banner-inner: calc(4.2% + 2rem);
+
+  @apply w-full flex relative min-w-0;
+}
+
+.wrap.md {
+  @apply my-[1.8125rem] mx-[2.125rem];
+}
+
+.wrap.sm {
+  @apply my-[3.9375rem] mx-[2.625rem];
+}
+
+.decor {
+  @apply absolute inset-0 w-full h-full flex;
+}
+
+.decor svg {
+  @apply w-full h-full;
+}
+
+.inner {
+  @apply absolute inset-0 pointer-events-none will-change-opacity transition-opacity duration-300;
+}
+
+.image {
+  @apply w-[98.85%] h-[214%];
+}
+
+.holder {
+  @apply w-full h-full flex-auto flex min-h-0 relative py-8 px-[var(--padding-banner-inner)];
+}
+
+.mob {
+  @apply hidden;
+}
+
+@screen xs {
+  .wrap {
+    --padding-banner-inner: calc(7.5% + 1.875rem);
+  }
+
+  .desktop {
+    @apply hidden;
+  }
+
+  .mob {
+    @apply block;
+  }
+
+  .holder {
+    @apply py-[var(--padding-banner-inner)] px-[1.875rem];
+  }
+
+  .wrap.md {
+    @apply m-[1.125rem];
+  }
+
+  /* .wrap.sm {
+        @apply my-[1.8125rem] mx-[2.125rem];
+    } */
+
+  .wrap.sm {
+    @apply m-[1.125rem];
+  }
+}
+
+@screen xxs {
+  .wrap.md {
+    @apply m-[1.125rem];
+  }
+
+  .wrap.sm {
+    @apply m-[1.1875rem];
+  }
+}

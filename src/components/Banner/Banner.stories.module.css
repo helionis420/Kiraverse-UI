@@ -1,0 +1,27 @@
+.wrap {
+  @apply max-w-[80.125rem];
+}
+
+.wrap .banner {
+  --min-banner-height: 28.625rem;
+}
+
+.wrap.sm {
+  @apply max-w-[54.25rem];
+}
+
+.wrap .desc {
+  @apply text-typography-pink-100;
+}
+
+@screen xs {
+  .wrap .banner {
+    --min-banner-height: 35.5rem;
+  }
+}
+
+@screen xxs {
+  .wrap .btn {
+    @apply min-w-[auto] w-full;
+  }
+}

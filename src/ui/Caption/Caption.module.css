@@ -1,0 +1,15 @@
+.wrap {
+  --caption-wrap-max-width: 67.4375rem;
+
+  @apply w-[var(--title-wrap-width)] h-[2.75rem] mx-4;
+}
+
+.wrap .title {
+  @apply text-stroke-blue-100 z-10 truncate text-center tracking-[3px];
+}
+
+@screen sm {
+  .wrap {
+    @apply mx-0;
+  }
+}

@@ -1,0 +1,15 @@
+.grid-wrap {
+  @apply grid lg:grid-cols-1 grid-cols-3 grid-flow-row auto-rows-max gap-6;
+}
+
+.grid-item {
+  @apply grid grid-cols-[auto_1fr] gap-4 items-center;
+}
+
+.icon-wrap {
+  @apply flex justify-center items-center h-[1.25rem];
+}
+
+.icon {
+  @apply text-light;
+}

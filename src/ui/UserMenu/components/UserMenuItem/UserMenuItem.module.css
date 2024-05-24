@@ -1,0 +1,20 @@
+.wrap {
+  @apply flex w-full items-center text-typography-pink-100 rounded-md;
+}
+
+.wrap:hover {
+  @apply text-light;
+}
+
+.wrap:active {
+  @apply text-stroke-blue-100;
+}
+
+.wrap .icon,
+.wrap .label {
+  @apply text-inherit transition-colors;
+}
+
+.wrap .label {
+  @apply ml-2 text-[0.9375rem];
+}

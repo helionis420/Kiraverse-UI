@@ -1,0 +1,81 @@
+.wrap {
+  --tag-width: 9.875rem;
+  --tag-height: 3rem;
+
+  @apply relative w-[var(--tag-width)] h-[var(--tag-height)] outline-none flex justify-center items-center;
+}
+
+.decor {
+  @apply absolute inset-0 transition-opacity duration-300;
+}
+
+.decor.hover,
+.decor.focus {
+  @apply opacity-0;
+}
+
+.wrap .content-wrap {
+  @apply w-full px-3 inline-block mt-[0.375rem];
+}
+
+.wrap .content {
+  @apply inline-block transition-colors duration-300 text-center w-full truncate uppercase;
+}
+
+.wrap:hover .content {
+  @apply text-typography-bright-pink-100;
+}
+
+.wrap:focus-visible .decor.default {
+  @apply opacity-0;
+}
+
+.wrap:focus:not(:focus-visible) .decor.default {
+  @apply opacity-0;
+}
+
+.wrap:focus .decor.focus {
+  @apply opacity-100;
+}
+
+.wrap:focus-visible .decor.focus {
+  @apply opacity-100;
+}
+
+.wrap:focus:not(:focus-visible) .decor.focus {
+  @apply opacity-100;
+}
+
+.wrap:focus .content {
+  @apply text-typography-bright-pink-100;
+}
+
+.wrap:focus-visible .content {
+  @apply text-typography-bright-pink-100;
+}
+
+.wrap:focus:not(:focus-visible) .content {
+  @apply text-typography-bright-pink-100;
+}
+
+.wrap:active .decor.default,
+.wrap.active .decor.default,
+.wrap:focus .decor.default {
+  @apply opacity-0;
+}
+
+.wrap:active .decor.hover,
+.wrap.active .decor.hover,
+.wrap:focus .decor.hover {
+  @apply opacity-100;
+}
+
+.wrap:active:focus .decor.focus,
+.wrap.active:focus .decor.focus {
+  @apply opacity-0;
+}
+
+.wrap.active .content,
+.wrap.active:focus .content {
+  @apply text-stroke-blue-100;
+}

@@ -1,0 +1,116 @@
+@import url('./reset.css');
+@import url('./variables.css');
+@import url('./fonts.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-bg {
+  @apply bg-dark relative before:absolute before:pointer-events-none before:inset-0 before:bg-[url('/images/bg-bottom.webp')] before:bg-no-repeat before:bg-bottom;
+}
+
+.main-bg::before {
+  background-size: 100% auto;
+}
+
+.lock-scroll-y {
+  @apply fixed top-0 left-0 right-0 bottom-0 overflow-y-hidden;
+}
+
+.video-bg {
+  @apply absolute overflow-hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover w-auto h-auto;
+}
+
+.swiper-slide {
+  transform: translateZ(0);
+  backface-visibility: visible !important;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  @apply hidden;
+}
+
+@screen xl {
+  .main-bg {
+    @apply before:bg-auto;
+  }
+}
+
+@screen xs {
+  .main-bg::before {
+    @apply bg-[url('/images/bg-bottom-mob.webp')];
+
+    background-size: 100% auto;
+  }
+}
+
+@layer components {
+  /* html {
+        @apply scroll-smooth;
+    } */
+
+  body .visually-hidden {
+    @apply absolute h-px w-px -m-px p-0 border-0 overflow-hidden;
+
+    clip: rect(0 0 0 0);
+  }
+
+  /* Can change ring color if needed */
+  body .focus-primary:focus-visible {
+    @apply outline-none ring-2 ring-blue-500;
+  }
+
+  body .focus-primary:focus {
+    @apply outline-none ring-2 ring-blue-500;
+  }
+
+  body .focus-within-primary:focus-within {
+    @apply outline-none ring-2 ring-blue-500;
+  }
+
+  body .focus-primary:focus:not(body .focus-primary:focus-visible) {
+    @apply ring-0;
+  }
+
+  body .focus-primary-child {
+    @apply ring-2 ring-blue-500;
+  }
+
+  body > [id='__next'] {
+    @apply flex flex-col;
+  }
+
+  body main {
+    @apply min-w-0 flex-auto relative;
+  }
+}
+
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading='lazy'] {
+    clip-path: inset(0.6px);
+  }
+}
+
+/* Can change scrollbars colors if needed */
+@media (hover: hover) and (pointer: fine) {
+  *::-webkit-scrollbar {
+    @apply lg:w-[0.25rem] lg:h-[0.25rem];
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    @apply lg:bg-stroke-violet-100;
+  }
+
+  *::-webkit-scrollbar-track {
+    @apply lg:bg-background-grey-10;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply lg:bg-stroke-white-50 lg:rounded-sm lg:border-4 lg:border-slate-100;
+  }
+}

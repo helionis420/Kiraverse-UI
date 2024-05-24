@@ -1,0 +1,95 @@
+.wrap {
+  @apply flex flex-col;
+}
+
+/* LABEL */
+
+.wrap .label {
+  @apply relative inline-block w-max mb-2 text-[0.9375rem];
+}
+
+.wrap .label.required::after {
+  @apply content-['*'] absolute top-0 right-[-0.625rem] text-stroke-error-main text-[0.9375rem] font-space-mono-regular;
+}
+
+.wrap .label .label-content {
+  @apply font-bold text-typography-pink-100;
+}
+
+/* INNER */
+
+.inner {
+  @apply relative inline-flex items-center w-full bg-dark  border-stroke-grey-100 border-solid border rounded-lg appearance-none focus-within:outline-none  transition-colors;
+}
+
+.inner.with-icon-right .input {
+  @apply pr-[3.75rem];
+}
+
+.wrap:not(.disabled) .inner {
+  @apply hover:border-stroke-blue-100 focus-within:border-stroke-blue-100;
+}
+
+.wrap.error .inner {
+  @apply shadow-none border-stroke-error-main;
+}
+
+.wrap.disabled .inner {
+  @apply bg-[hsla(244,15%,23%,0.65)];
+}
+
+/* INPUT WRAP */
+
+.input-wrap {
+  @apply w-full flex justify-between;
+}
+
+/* INPUT */
+
+.wrap.disabled .input {
+  @apply cursor-not-allowed text-[#928C9E];
+}
+
+.input {
+  @apply appearance-none w-full h-full bg-transparent text-base font-space-mono-regular leading-6 text-light py-[0.625rem] px-5 outline-none caret-stroke-blue-100 placeholder:text-typography-pink-100;
+}
+
+/* DESCRIPTION */
+
+.wrap .description {
+  @apply inline-block text-sm text-typography-pink-100 mt-2 leading-[1.125rem];
+}
+
+.wrap.error .description {
+  @apply text-stroke-error-main;
+}
+
+/* ADDONS */
+
+.inner .addon-wrap {
+  @apply absolute top-1/2 -translate-y-1/2;
+}
+
+.inner.with-icon-right .addon-wrap {
+  @apply right-[1rem];
+}
+
+/* ICON */
+.icon {
+  @apply text-typography-pink-100;
+}
+
+/* TYPE PASSWORD BUTTON */
+
+.inner .addon-wrap .password-cta {
+  @apply flex justify-center items-center p-1 rounded-[0.25rem];
+}
+
+.wrap.disabled .password-cta {
+  @apply pointer-events-none;
+}
+
+.password-cta:hover,
+.password-cta:focus {
+  @apply bg-background-grey-10;
+}

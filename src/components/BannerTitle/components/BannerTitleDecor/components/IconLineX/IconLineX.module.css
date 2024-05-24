@@ -1,0 +1,11 @@
+.wrap {
+  @apply w-[calc(100%+5rem)] h-3.5 -mr-20 will-change-color transition-colors duration-300;
+}
+
+.wrap svg {
+  @apply w-full h-full;
+}
+
+.bottom svg {
+  @apply -scale-y-100;
+}

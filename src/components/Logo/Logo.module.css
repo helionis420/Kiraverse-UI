@@ -1,0 +1,9 @@
+.wrap {
+  @apply w-[11.4375rem] h-[1.75rem] text-white-100;
+}
+
+@screen md {
+  .wrap.responsive {
+    @apply w-[6.625rem] h-[1.125rem];
+  }
+}

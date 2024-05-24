@@ -1,0 +1,8 @@
+.wrap {
+  @apply min-w-0 h-full flex-auto flex;
+}
+
+.wrap svg,
+.wrap .image {
+  @apply w-full h-full;
+}

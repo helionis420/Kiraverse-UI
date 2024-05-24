@@ -1,0 +1,53 @@
+.wrap {
+  @apply bg-background-half-blur-30 backdrop-blur-[7.5px] py-12;
+}
+
+.logo-link {
+  @apply flex-shrink-0;
+}
+
+.holder {
+  @apply flex items-center;
+}
+
+.bottom {
+  @apply mt-[3.1875rem] pt-[1.5625rem] relative flex items-center justify-between before:h-px before:absolute before:opacity-50 before:top-0 before:left-0 before:right-0 before:bg-stroke-white-50;
+}
+
+.copy {
+  @apply text-typography-pink-100 ml-4;
+}
+
+@screen xl {
+  .holder {
+    @apply flex items-start;
+  }
+
+  .bottom {
+    @apply mt-12;
+  }
+}
+
+@screen lg {
+  .wrap {
+    @apply pb-16;
+  }
+
+  .holder {
+    @apply grid grid-cols-1;
+  }
+
+  .bottom {
+    @apply mt-8  pt-[1.875rem];
+  }
+}
+
+@screen md {
+  .bottom {
+    @apply grid grid-cols-1 gap-2.5;
+  }
+
+  .bottom .copy {
+    @apply text-base ml-0;
+  }
+}

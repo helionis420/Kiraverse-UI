@@ -1,0 +1,40 @@
+.wrap {
+  @apply absolute inset-0 w-full h-full flex flex-col pointer-events-none;
+}
+
+.head {
+  @apply absolute -top-[0.8125rem] -left-[4.17%] -right-[4.17%] z-[2];
+}
+
+.head svg {
+  @apply w-full;
+}
+
+.backdrop {
+  @apply absolute -left-[2.32%] -right-[2.32%] top-1/2 -translate-y-1/2;
+}
+
+.backdrop svg {
+  @apply w-full;
+}
+
+.item svg {
+  @apply w-full h-full relative z-[1];
+}
+
+.top,
+.bottom {
+  @apply w-full shrink-0 flex;
+}
+
+.top {
+  @apply h-[0.8125rem];
+}
+
+.bottom {
+  @apply h-3;
+}
+
+.center {
+  @apply w-full h-full -my-[0.01px] flex-1 min-h-0;
+}

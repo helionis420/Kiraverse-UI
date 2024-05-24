@@ -1,0 +1,37 @@
+.wrap {
+  @apply w-[6.25rem] h-[6.9375rem] flex will-change-color transition-colors duration-300;
+}
+
+.wrap svg {
+  @apply w-full h-full;
+}
+
+.mob {
+  @apply hidden;
+}
+
+.left-bottom svg {
+  @apply -scale-y-100;
+}
+
+.right-top svg {
+  @apply -scale-x-100;
+}
+
+.right-bottom svg {
+  @apply rotate-180;
+}
+
+@screen md {
+  .wrap.responsive {
+    @apply w-[4.8125rem] h-[5.3125rem];
+  }
+
+  .responsive .desktop {
+    @apply hidden;
+  }
+
+  .responsive .mob {
+    @apply block;
+  }
+}
