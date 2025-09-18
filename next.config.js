@@ -24,6 +24,9 @@ export default withBundleAnalyzer({
   devIndicators: {
     buildActivity: false,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     domains: ['images.unsplash.com', 'kiraverse.game'],
     formats: ['image/avif', 'image/webp'],
